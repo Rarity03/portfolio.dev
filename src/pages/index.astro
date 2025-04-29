@@ -1,0 +1,190 @@
+---
+import SocialPill from '../components/SocialPill.astro';
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Projects from '../components/Projects.astro';
+import {
+  Linkedln,
+  GitHub,
+  Mail,
+  Code,
+  Usercode,
+  Tech,
+  HTML,
+  CSS,
+  JavaScript,
+  ReactJS,
+  Tailwind,
+  NodeJS,
+  Express,
+  MongoDB,
+  Postgres,
+  Iconastro,
+  Docker,
+  MySQL,
+  Git,
+  VSCode,
+  Phyton,
+  Java,
+  Unity,
+  CSharp,
+  Npm,
+  Cv
+} from '../icons/icons.ts';
+import TechSection from '../components/TechSection.astro';
+---
+
+
+
+<Layout title="Portafolio de Kenneth - Desarrollador y programador FullStack">
+	<main class="px-4">
+		<SectionContainer id="top" class="py-44 pb-32">
+		    <div class="flex flex-row">
+				<div>
+					<h1 
+					class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex  flex-row gap-x-4 pb-6 lg:pb-4"
+					>
+					<span>Hey,</span> <span class="blink-shadow-purple">soy Kenneth</span>
+					</h1>
+						<h2 class="text-xl lg:text-2xl opaccity-80 text-wrap max-w[700px]">
+							Estudiante de Ingeniería de Computación <span class="shadow-orange">(últimos semestres)</span> y <span class="shadow-blue">desarrollador FullStack.</span> De Toluca, México.
+							<span class="shadow-pink">Aprendiendo y creciendo</span> en el mundo de la programación web. <span class="shadow-green">Abierto a aprender</span> nuevos frameworks y tecnologías.
+						</h2>
+						<nav class="flex gap-4 mt-8 flex-wrap">
+							<SocialPill href="https://www.linkedin.com/in/kenneth-mendoza-pliego-7132b7173">
+								<Linkedln class="size-4 md:size-6"/>
+								LinkedIn
+							</SocialPill>
+							<SocialPill href="https://github.com/Rarity03">
+								<GitHub class="size-4 md:size-6"/>
+								GitHub
+							</SocialPill>
+							<SocialPill href="mailto:kennethkael@gmail.com">
+								<Mail class="size-4 md:size-6"/>
+								kennethkael@gmail.com
+							</SocialPill>
+							<SocialPill href="https://drive.google.com/file/d/1g7vmAsE4A285GILEyUVwJUkOhSvKLbdk/view?usp=sharing">
+								<Cv class="size-4 md:size-6"/>
+								Ver CV
+							</SocialPill>
+						</nav>
+				</div>
+				<div class="w-full h-full">
+					<img class="rounded-full w-full h-auto ml-10 sm:w-3/4 md:w-3/4  lg:w-auto lg:ml-15" src="/src/assets/Myphoto1.webp" alt="photo1"/>
+				</div>
+			</div>
+				
+	
+		</SectionContainer>
+
+		<SectionContainer id="proyectos" >
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-8 md:size-9"/>
+				<span class="shadow-royalblue">Proyectos</span>
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Usercode class="size-8 md:size-9"/>
+				<span class="shadow-pink">Sobre mi</span>	
+			</h2>
+			
+			<div class="flex flex-row">
+				<div>
+					<p class="text-base text-pretty mb-3">
+						Me llamo Kenneth Kael Mendoza Pliego y soy estudiante de Ingeniería de Computación en la Universidad Autónoma del Estado de México, 
+						donde estoy cursando mis últimos semestres.
+					</p>
+		
+					<p class="text-base text-pretty mb-3">			
+						Empecé en el mundo de la programación desde los 14 años al descubrir el mundo del desarrollo de videojuegos, interesándome de igual manera en el desarrollo web, 
+						pero fue hasta los 18 años que decidí estudiar una carrera relacionada con la programación.
+					</p>
+		
+					<p class="text-base text-pretty mb-3">						
+						Actualmente cuento con una base de conocimiento y desarrollo centrada en React para el FrontEnd y Node.js para el BackEnd, de las cuales aún continúo estudiando y aprendiendo. Sin embargo, 
+						me encuentro abierto a aprender otras tecnologías y frameworks para mejorar y ampliar mis habilidades como desarrollador FullStack.
+					</p>
+		
+					<p class="text-base text-pretty mb-3">
+						Cuando no estoy realizando desarrollo web, dedico mi tiempo libre a aprender nuevos idiomas o desarrollar videojuegos por hobby, aunque aun soy un aficionado en este ultimo.
+					</p>
+				</div>
+				<div class="w-full h-full flex items-center justify-center">
+					<img class="rounded-full w-full h-full mt-10 ml-10 sm:w-3/4 md:w-3/4 lg:w-auto lg:ml-15" src="/src/assets/Myphoto2.webp" alt="photo2"/>
+				  </div>
+			</div>
+		</SectionContainer>
+
+		<SectionContainer id="tecnologias">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Tech class="size-8 md:size-9"/>
+				<span class="shadow-green">Tecnologias</span>	
+			</h2>
+			<p class="mb-4">Actualmente cuento con un nivel <span class="shadow-pink">Trainee/Jr</span> en diversas tecnologías. Mi stack de tecnologías incluye:</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+				<TechSection
+				title="FrontEnd"
+				items={[
+					{ icon: HTML, name: 'HTML' },
+					{ icon: CSS, name: 'CSS' },
+					{ icon: JavaScript, name: 'JavaScript' },
+					{ icon: ReactJS, name: 'ReactJS' },
+					{ icon: Tailwind, name: 'TailwindCSS' },
+				]}
+				/>
+				<TechSection
+				title="BackEnd"
+				items={[
+					{ icon: NodeJS, name: 'NodeJS' },
+					{ icon: Express, name: 'Express' },
+					{ icon: MongoDB, name: 'MongoDB' },
+					{ icon: Postgres, name: 'Postgres' },
+				]}
+				/>
+				<TechSection
+				title="Aprendiendo"
+				items={[
+					{ icon: Iconastro, name: 'Astro' },
+					{ icon: Docker, name: 'Docker' },
+					{ icon: MySQL, name: 'MySQL' },
+					{ icon: ReactJS, name: 'React Native' },
+				]}
+				/>
+				<TechSection
+				title="Herramientas"
+				items={[
+					{ icon: GitHub, name: 'GitHub' },
+					{ icon: Git, name: 'Git' },
+					{ icon: VSCode, name: 'VSCode' },
+					{ icon: Npm, name: 'Npm' },
+				]}
+				/>
+			</div>
+			<div class="bg-white/5 border border-royalblue m-5 rounded-lg p-6 w-full h-auto">
+				<h2 class="text-center text-3xl font-semibold mb-4 shadow-royalblue">Otras</h2>
+				<div class="flex flex-wrap justify-center gap-3 items-center">
+					<div class="flex flex-col justify-center items-center gap-4 m-3">
+						<Phyton class="size-6 md:size-16 px-1"/>
+						<span>Python</span>
+					</div>
+					<div class="flex flex-col justify-center items-center gap-4 m-3">
+						<Java class="size-6 md:size-16 px-1"/>
+						<span>Java</span>	
+					</div>
+					<div class="flex flex-col justify-center items-center gap-4 m-3">
+						<Unity class="size-6 md:size-16 px-1"/>
+						<span>Unity</span>
+					</div>
+					<div class="flex flex-col justify-center items-center gap-4 m-3">
+						<CSharp class="size-6 md:size-16 px-1"/> 
+						<span>C#</span>
+					</div>
+					
+				</div>
+			</div>
+		</SectionContainer>
+	</main>
+</Layout>

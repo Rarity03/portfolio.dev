@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@keyframes blink-shadow {
+    0%, 100% {
+        text-shadow: 0 0 5px #8a2be2,  
+                    0 0 10px #8a2be2,    
+                    0 0 15px #8a2be2,    
+                    0 0 20px #8a2be2,    
+                    0 0 30px #8a2be2,    
+                    0 0 40px #8a2be2,    
+                    0 0 50px #8a2be2;
+    }
+    30%,  60%, 80% {
+        text-shadow: none;
+    }
+    10%, 20%, 40%, 50%, 70%, 90% {
+        text-shadow: 0 0 5px #8a2be2,  
+                    0 0 10px #8a2be2,    
+                    0 0 15px #8a2be2,    
+                    0 0 20px #8a2be2,    
+                    0 0 30px #8a2be2,    
+                    0 0 40px #8a2be2,    
+                    0 0 50px #8a2be2;
+    }
+}
+
+.nav-scrolled {
+    background-color: #191919;
+    border: 1px solid ;
+    border-radius: 10px;
+    border-color: #4169e1;
+    box-shadow: 0 0 5px #4169e1,  
+    0 0 10px #4169e1,    
+    0 0 15px #4169e1;
+    transition: border 0.3s ease-in-out;
+}
+
+.blink-shadow-purple {
+    text-shadow:0 0 5px #8a2be2,  
+                0 0 10px #8a2be2,    
+                0 0 15px #8a2be2,    
+                0 0 20px #8a2be2,    
+                0 0 30px #8a2be2,    
+                0 0 40px #8a2be2,    
+                0 0 50px #8a2be2;
+    animation: blink-shadow 4s infinite;
+    animation-delay: 10s;
+}
+
+.shadow-purple{
+    text-shadow: 0 0 5px #8a2be2,  
+    0 0 10px #8a2be2,    
+    0 0 15px #8a2be2,    
+    0 0 20px #8a2be2,    
+    0 0 30px #8a2be2,    
+    0 0 40px #8a2be2,    
+    0 0 50px #8a2be2;
+}
+
+
+
+.shadow-pink{
+    text-shadow: 0 0 5px #ff00ff,  
+    0 0 10px #ff00ff,    
+    0 0 15px #ff00ff,    
+    0 0 20px #ff00ff,    
+    0 0 30px #ff00ff,    
+    0 0 40px #ff00ff,    
+    0 0 50px #ff00ff;
+}
+
+
+.shadow-blue{
+    text-shadow: 0 0 5px #00ffff,  
+    0 0 10px #00ffff,    
+    0 0 15px #00ffff,    
+    0 0 20px #00ffff,    
+    0 0 30px #00ffff,    
+    0 0 40px #00ffff,    
+    0 0 50px #00ffff;
+}
+
+.shadow-green{
+    text-shadow: 0 0 5px #39ff14,  
+    0 0 10px #39ff14,    
+    0 0 15px #39ff14,    
+    0 0 20px #39ff14,    
+    0 0 30px #39ff14,    
+    0 0 40px #39ff14,    
+    0 0 50px #39ff14;
+}
+
+.shadow-orange{
+    text-shadow: 0 0 5px #ff4500,  
+    0 0 10px #ff4500,    
+    0 0 15px #ff4500,    
+    0 0 20px #ff4500,    
+    0 0 30px #ff4500,    
+    0 0 40px #ff4500,    
+    0 0 50px #ff4500;
+}
+
+.shadow-royalblue{
+    text-shadow: 0 0 5px #4169e1,  
+    0 0 10px #4169e1,    
+    0 0 15px #4169e1,    
+    0 0 20px #4169e1,    
+    0 0 30px #4169e1,    
+    0 0 40px #4169e1,    
+    0 0 50px #4169e1;
+}
+
+.border-royalblue{
+    border-color: #4169e1;
+    box-shadow: 0 0 5px #4169e1,  
+    0 0 10px #4169e1,    
+    0 0 15px #4169e1
+}
+
+
+.neon-deeppink{
+    color: #ff1493;
+}
+
+

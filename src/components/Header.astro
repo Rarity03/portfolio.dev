@@ -1,0 +1,41 @@
+<header class="flex justify-center items-center py-5 w-full sm:w-[500px] xl:w-[1120px] mx-auto">
+    <nav class="shadow-royalblue flex gap-x-10 flex-row z-50 fixed px-8">
+        <a href="#top">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#tecnologias">tecnologias</a>
+    </nav>
+</header>
+
+<script>
+    if (typeof window !== "undefined") {
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) { 
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); 
+                const targetId = link.getAttribute('href').substring(1); 
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const offset = 80; 
+                    const elementPosition = targetElement.offsetTop;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth' 
+                    });
+                }
+            });
+        });
+    }
+</script>

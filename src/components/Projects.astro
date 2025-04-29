@@ -1,0 +1,70 @@
+---
+import GitHub from "../icons/GitHub.astro"
+import SocialPill from "./SocialPill.astro"
+import Link from "../icons/Link.astro"
+
+const PROJECTS = [
+    {
+        title: "E-Commerce-Simplificado",
+        description: `Proyecto personal FullStack que permite a usuarios explorar distintos productos electrónicos de su interés, agregarlos 
+        a un carrito y realizar sus compras dando un seguimiento de cada una de sus órdenes de forma segura desde su cuenta personal.
+        <br /><br />Para evitar registrarse puedes loguearte con la siguiente cuenta pública:<br /><br />
+        -Email: PublicTest@email.com<br />
+        -Password: PublicTest<br /><br />
+        (Al utilizar la versión gratuita de Render, puede tardar 1 min aprox. en conectarse con el backend)`,
+        
+        link: "https://e-commerce-simplificado.onrender.com",
+        github: "https://github.com/Rarity03/E-Commerce-Simplificado",
+        image: 'src/assets/Projects/ECommerse.webp',
+        tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "TailwindCSS"],
+    },
+    {
+        title: "App Movil de Lectura: Manga, Comic y Manhwa",
+        description: `Proyecto escolar AppMóvil (FrontEnd) de una aplicación de lectura, donde los usuarios pueden leer distintos tipos de novelas, además de subir las suyas propias.
+Mostrando siempre las novelas más populares del momento y contando con un sistema de favoritos personalizado.
+        `,
+        github: "https://github.com/Rarity03/App-Movil-de-Lectura-Manga-Comic-y-Manhwa.git",
+        image: 'src/assets/Projects/AppMovil.webp',
+        tags: ["React Native", "Expo", "Expo go", "Strapi", "MongoDB", "Docker"],
+    }
+]
+---
+
+{
+    PROJECTS.map((project) => (
+        <article>
+            <div class="flex flex-col mt-10">
+                <div class="px-12">
+                    <h3 class="text-2xl font-semibold mb-2 shadow-purple">{project.title}</h3>
+                    <p class="text-lg mb-4 text-pretty" set:html={project.description}></p>
+                    <ul class="flex gap-x-4 flex-wrap mb-4 ">
+                        {project.tags.map((tag) => (
+                            <li class="rounded-full border border-royalblue
+                            flex justify-center items-center 
+                            gap-x-2 py-1 px-2 mb-5 md:py-2 md:px-4 
+                            text-xs md:text-base"
+                            >
+                            {tag}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div class="border border-royalblue rounded overflow-hidden">
+                    <img class="rounded shadow-2xl shadow-white/10 w-full h-full max-h-500px" src={project.image} alt={`Captura de pantalla del proyecto ${project.title}`} />
+                </div>
+                <nav class="flex gap-x-4 flex-wrap mb-4 justify-center mt-4"> 
+                    <SocialPill href={project.github}>
+                        <GitHub class="size-4 md:size-6"/>
+                    </SocialPill>
+                    {
+                        project.link && (
+                        <SocialPill href={project.link}>
+                            <Link  class="size-4 md:size-6" />
+                        </SocialPill>
+                        )
+                    }
+                </nav>
+            </div>
+        </article>
+    ))
+}
