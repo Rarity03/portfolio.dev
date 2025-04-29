@@ -15,7 +15,7 @@ const PROJECTS = [
         
         link: "https://e-commerce-simplificado.onrender.com",
         github: "https://github.com/Rarity03/E-Commerce-Simplificado",
-        image: 'src/assets/Projects/ECommerse.webp',
+        image: '/Projects/ECommerse.webp',
         tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "TailwindCSS"],
     },
     {
@@ -24,7 +24,7 @@ const PROJECTS = [
 Mostrando siempre las novelas más populares del momento y contando con un sistema de favoritos personalizado.
         `,
         github: "https://github.com/Rarity03/App-Movil-de-Lectura-Manga-Comic-y-Manhwa.git",
-        image: 'src/assets/Projects/AppMovil.webp',
+        image: '/Projects/AppMovil.webp',
         tags: ["React Native", "Expo", "Expo go", "Strapi", "MongoDB", "Docker"],
     }
 ]
@@ -52,7 +52,7 @@ Mostrando siempre las novelas más populares del momento y contando con un siste
                 <div class="border border-royalblue rounded overflow-hidden">
                     <img class="rounded shadow-2xl shadow-white/10 w-full h-full max-h-500px" src={project.image} alt={`Captura de pantalla del proyecto ${project.title}`} />
                 </div>
-                <nav class="flex gap-x-4 flex-wrap mb-4 justify-center mt-4"> 
+                <div class="flex gap-x-4 flex-wrap mb-4 justify-center mt-4"> 
                     <SocialPill href={project.github}>
                         <GitHub class="size-4 md:size-6"/>
                     </SocialPill>
@@ -63,7 +63,7 @@ Mostrando siempre las novelas más populares del momento y contando con un siste
                         </SocialPill>
                         )
                     }
-                </nav>
+                </div>
             </div>
         </article>
     ))
